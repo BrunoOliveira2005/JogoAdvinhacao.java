@@ -8,32 +8,32 @@ public class JogoDaAdivinhação {
 		Scanner entrada = new Scanner(System.in);
 		
 		int continuar;
-		int numeroSorteado;
-		int tentativas;
-		int numero;
+		int numberSorteado;
+		int attempts;
+		int number;
 		
 		do {
 			System.out.println("When drawing a number, enter 0 ... 100\n");
 			Random numeroAleatorio = new Random();
-			numeroSorteado = numeroAleatorio.nextInt(101);
+			numberSorteado = numeroAleatorio.nextInt(101);
 			
 			System.out.println("Started the game! Good luck!");
-			tentativas = 0;
+			attempts = 0;
 			
 		do {
-				tentativas++;
-				System.out.printf("tentativa %d:", tentativas);
-				numero = entrada.nextInt();
+				attempts++;
+				System.out.printf("tentativa %d:", attempts);
+				number = entrada.nextInt();
 				
-				if(numero > numeroSorteado) {
-					System.out.printf("The number is less than %d... \n\n", numero);
-				} else if (numero < numeroSorteado) {
-					System.out.printf("The number is greater than %d \n\n", numero);
+				if(number > numberSorteado) {
+					System.out.printf("The number is less than %d... \n\n", number);
+				} else if (number < numberSorteado) {
+					System.out.printf("The number is greater than %d \n\n", number);
 				} else {
-					System.out.printf("\n\n That's it! you got it right in %d attempts\n\n", tentativas);
+					System.out.printf("\n\n That's it! you got it right in %d attempts\n\n", attempts);
 				}
 				
-		}while (numero != numeroSorteado);
+		}while (number != numberSorteado);
 				System.out.println("Enter 0 to exit or any other number to continue: ");
 				continuar = entrada.nextInt();
 				
